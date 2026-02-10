@@ -41,3 +41,10 @@ echo 'Typ $jeStudent: ' . gettype($jeStudent) . "\n";
 echo "\n--- Tvůj úkol ---\n";
 // TODO: Vytvoř proměnné pro svého oblíbeného hrdinu (jméno, síla, zdraví)
 //       a vypiš je na obrazovku
+$Jmeno = 'Batman';
+$Sila = 120;
+$Zdravi = 250;
+
+echo "Jmeno: {$Jmeno}\n";
+echo "Sila: {$Sila}\n";
+echo "Zdravi: {$Zdravi}\n";
