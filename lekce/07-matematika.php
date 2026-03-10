@@ -15,11 +15,7 @@ Instrukce:
 · Určete, zda tento trojúhelník je rovnostranný, rovnoramenný, nebo obecný a vypište.
 · Vynechte dva řádky, provede se výpočet obvodu a obsahu (použijte Heronův vzorec 𝑆=√𝑠(𝑠−𝑎)(𝑠−𝑏)(𝑠−𝑐), kde 𝑠=𝑎+𝑏+𝑐2) podle zadání (odmocnina je sqrt($cislo)) a vypíše se: obvod (obsah) je hodnota
 */
-$a = 10;
-$b = 15;
-$c = 6;
 
-echo "Strany trojuhelnika: a={$a} cm, b={$b} cm, c={$c} cm \n";
 
 
 
@@ -49,7 +45,10 @@ DALŠÍ ÚKOLY
    Funkce vrátí text s typem trojúhelníku.
 
 ----------------------------------------------------
+*/
 
+
+/*
 6) Vytvořte funkci getHeightToA($a, $content),
    která vypočítá výšku na stranu a.
 
@@ -101,8 +100,41 @@ FUNKCE – DOPLŇTE ŘEŠENÍ
 
 function getTriangleAngleType(float $a, float $b, float $c): string
 {
-    // TODO: doplňte řešení
+
+    $x = "Tupoúhlý";
+    $y = "Ostroúhlý";
+    $z = "Pravouhlý";
+
+    if ($a >= $b && $a >= $c) {
+        $c = $a;
+        $a = $b;
+        $b = $c;
+    } elseif ($b >= $a && $b >= $c) {
+        $c = $b;
+        $b = $a;
+        $a = $c;
+    } else {
+        // c je již nejdelší strana
+    }
+
+    if ($a + $b >= $c && $a + $c >= $b && $b + $c >= $a) {
+        if ($c ** 2 == $a ** 2 + $b ** 2) {
+            return $z;
+        } elseif ($c ** 2 < $a ** 2 + $b ** 2) {
+            return $y;
+        } elseif ($c ** 2 > $a ** 2 + $b ** 2) {
+            return $x;
+        }
+    } else {
+        return "Trojuhelnik nelze sestrojit";
+    }
+
+    echo "Strany trojuhelnika: a={$a} cm, b={$b} cm, c={$c} cm \n";
 }
+
+echo getTriangleAngleType(4, 5, 3) . "\n";
+
+
 
 
 function getHeightToA(float $a, float $content): float
