@@ -58,6 +58,20 @@ Použijte vzorec:
 
    Funkce vrátí výšku.
 
+   */
+
+
+
+function getHeightToA(float $a, float $obsah): float
+{
+    $v_a = (2 * $obsah) / $a;
+    return $v_a;
+}
+
+echo getHeightToA(5, 25);
+
+
+/*
 ----------------------------------------------------
 
 7) Vytvořte funkci getAngles($a, $b, $c),
@@ -92,12 +106,51 @@ Funkce vrátí pole:
 	   'min' => ...,
        'max' => ...
    ]
+*/
 
+
+
+function getMinMaxSide(int $a, int $b, int $c): array // Změněno na array
+{
+    // Předpokládejme na začátku, že první číslo je rovnou max i min
+    $max = $a;
+    $min = $a;
+
+    // Hledáme maximum
+    if ($b > $max) {
+        $max = $b;
+    }
+    if ($c > $max) {
+        $max = $c;
+    }
+
+    // Hledáme minimum
+    if ($b < $min) {
+        $min = $b;
+    }
+    if ($c < $min) {
+        $min = $c;
+    }
+
+    // Vracíme obě hodnoty v poli
+    return [
+        'max' => $max,
+        'min' => $min
+    ];
+}
+
+// Jak to správně vypsat (využijeme tvou znalost destrukturalizace ze 4. lekce):
+['max' => $mojeMax, 'min' => $mojeMin] = getMinMaxSide(10, 2, 7);
+
+echo "Největší strana je: {$mojeMax}\n";
+echo "Nejmenší strana je: {$mojeMin}\n";
+
+/*
 ====================================================
 FUNKCE – DOPLŇTE ŘEŠENÍ
 ====================================================
 */
-
+/*
 function getTriangleAngleType(float $a, float $b, float $c): string
 {
 
@@ -133,23 +186,4 @@ function getTriangleAngleType(float $a, float $b, float $c): string
 }
 
 echo getTriangleAngleType(4, 5, 3) . "\n";
-
-
-
-
-function getHeightToA(float $a, float $content): float
-{
-    // TODO: doplňte řešení
-}
-
-
-function getAngles(float $a, float $b, float $c): array
-{
-    // TODO: doplňte řešení
-}
-
-
-function getMinMaxSide(float $a, float $b, float $c): array
-{
-    // TODO: doplňte řešení
-}
+*/
