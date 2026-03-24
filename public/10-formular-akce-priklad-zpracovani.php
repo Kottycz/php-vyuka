@@ -48,73 +48,7 @@ $uspech = empty($chyby);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zpracování formuláře</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        h1 { color: #4F5B93; }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .success {
-            background: #e8f5e9;
-            border: 1px solid #c8e6c9;
-            padding: 16px;
-            border-radius: 8px;
-            color: #2e7d32;
-        }
-        .success h2 { color: #2e7d32; margin-top: 0; }
-        .errors {
-            background: #fdecea;
-            border: 1px solid #f5c6cb;
-            padding: 16px;
-            border-radius: 8px;
-            color: #721c24;
-        }
-        .errors h2 { color: #721c24; margin-top: 0; }
-        .errors li { margin: 4px 0; }
-        a { color: #4F5B93; }
-        code {
-            background: #e8e8e8;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 13px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px 12px;
-            text-align: left;
-        }
-        th { background: #4F5B93; color: white; width: 120px; }
-        pre {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 16px;
-            border-radius: 6px;
-            overflow-x: auto;
-            font-size: 13px;
-        }
-        .info {
-            background: #e3f2fd;
-            border-left: 4px solid #4F5B93;
-            padding: 12px 16px;
-            margin: 15px 0;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Zpracování formuláře</h1>

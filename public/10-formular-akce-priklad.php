@@ -18,79 +18,7 @@ declare(strict_types=1);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekce 10: Formulář s akcí - Příklad</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        h1 { color: #4F5B93; }
-        h2 { color: #333; margin-top: 30px; }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        label {
-            display: block;
-            margin: 12px 0 4px;
-            font-weight: 600;
-        }
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 4px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-        textarea { resize: vertical; min-height: 80px; }
-        button {
-            background: #4F5B93;
-            color: white;
-            padding: 10px 24px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 15px;
-            margin-top: 10px;
-        }
-        button:hover { background: #3d4875; }
-        code {
-            background: #e8e8e8;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 13px;
-        }
-        pre {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 16px;
-            border-radius: 6px;
-            overflow-x: auto;
-            font-size: 13px;
-        }
-        a { color: #4F5B93; }
-        .info {
-            background: #e3f2fd;
-            border-left: 4px solid #4F5B93;
-            padding: 12px 16px;
-            margin: 15px 0;
-            font-size: 14px;
-        }
-        .hint {
-            font-size: 12px;
-            color: #888;
-            margin-top: 2px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Lekce 10: Formulář s akcí na jinou stránku</h1>
@@ -137,11 +65,13 @@ declare(strict_types=1);
 &lt;/form&gt;</pre>
 
         <h3>2. Cílová stránka přečte data z $_POST</h3>
-<pre>&lt;?php
+<pre>
+<?php
 // zpracovani.php - sem přijdou data po odeslání
 $jmeno = trim($_POST['jmeno'] ?? '');
 echo htmlspecialchars($jmeno);
-?&gt;</pre>
+?>;
+</pre>
 
         <h3>3. Kdy použít action na jinou stránku?</h3>
         <ul>
