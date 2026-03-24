@@ -47,6 +47,22 @@ DALŠÍ ÚKOLY
 ----------------------------------------------------
 */
 
+function getTriangleAngleType(int $a, int $b, int $c)
+{
+    if ($a >= $c && $a >= $b) {
+        $a = $c;
+    } elseif ($b >= $c && $b >= $a) {
+        $b = $c;
+    } elseif ($c ** 2 == $a ** 2 + $b ** 2) {
+        return "pravouhly";
+    } elseif ($c ** 2 < $a ** 2 + $b ** 2) {
+        return "ostrouhly";
+    } elseif ($c ** 2 > $a ** 2 + $b ** 2) {
+        return "tupouhly";
+    }
+}
+
+echo getTriangleAngleType(7, 4, 5);
 
 /*
 6) Vytvořte funkci getHeightToA($a, $content),
@@ -60,7 +76,7 @@ Použijte vzorec:
 
    */
 
-
+/*
 
 function getHeightToA(float $a, float $obsah): float
 {
@@ -108,7 +124,7 @@ Funkce vrátí pole:
    ]
 */
 
-
+/*
 
 function getMinMaxSide(int $a, int $b, int $c): array // Změněno na array
 {
