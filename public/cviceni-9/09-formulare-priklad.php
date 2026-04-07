@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -109,6 +110,7 @@ $osoby = $_SESSION['osoby'];
 ?>
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,20 +123,30 @@ $osoby = $_SESSION['osoby'];
             padding: 20px;
             background: #f5f5f5;
         }
-        h1 { color: #4F5B93; }
-        h2 { color: #333; margin-top: 30px; }
+
+        h1 {
+            color: #4F5B93;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+
         .card {
             background: white;
             padding: 20px;
             border-radius: 8px;
             margin: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         label {
             display: block;
             margin: 12px 0 4px;
             font-weight: 600;
         }
+
         input[type="text"],
         input[type="email"],
         input[type="number"],
@@ -149,19 +161,28 @@ $osoby = $_SESSION['osoby'];
             box-sizing: border-box;
             font-size: 14px;
         }
-        textarea { resize: vertical; min-height: 60px; }
-        .radio-group, .checkbox-group {
+
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .radio-group,
+        .checkbox-group {
             display: flex;
             gap: 20px;
             margin: 6px 0 10px;
         }
-        .radio-group label, .checkbox-group label {
+
+        .radio-group label,
+        .checkbox-group label {
             display: flex;
             align-items: center;
             gap: 6px;
             font-weight: normal;
             margin: 0;
         }
+
         button {
             background: #4F5B93;
             color: white;
@@ -172,11 +193,19 @@ $osoby = $_SESSION['osoby'];
             font-size: 15px;
             margin-top: 10px;
         }
-        button:hover { background: #3d4875; }
+
+        button:hover {
+            background: #3d4875;
+        }
+
         .btn-danger {
             background: #c0392b;
         }
-        .btn-danger:hover { background: #a93226; }
+
+        .btn-danger:hover {
+            background: #a93226;
+        }
+
         .errors {
             background: #fdecea;
             border: 1px solid #f5c6cb;
@@ -185,36 +214,58 @@ $osoby = $_SESSION['osoby'];
             margin-bottom: 15px;
             color: #721c24;
         }
-        .errors li { margin: 4px 0; }
+
+        .errors li {
+            margin: 4px 0;
+        }
+
         .hint {
             font-size: 12px;
             color: #888;
             margin-top: 2px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 8px 10px;
             text-align: left;
             font-size: 13px;
         }
+
         th {
             background: #4F5B93;
             color: white;
         }
-        tr:nth-child(even) { background: #f9f9f9; }
-        .empty { color: #999; font-style: italic; padding: 20px; text-align: center; }
-        a { color: #4F5B93; }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .empty {
+            color: #999;
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+        }
+
+        a {
+            color: #4F5B93;
+        }
+
         code {
             background: #e8e8e8;
             padding: 2px 6px;
             border-radius: 3px;
             font-size: 13px;
         }
+
         .info {
             background: #e3f2fd;
             border-left: 4px solid #4F5B93;
@@ -224,6 +275,7 @@ $osoby = $_SESSION['osoby'];
         }
     </style>
 </head>
+
 <body>
     <h1>Lekce 9: Formuláře - Příklad</h1>
     <p><a href="index.php">&larr; Zpět</a> | <a href="09-formulare-zadani.php">Zadání &rarr;</a></p>
@@ -252,25 +304,25 @@ $osoby = $_SESSION['osoby'];
             <!-- TEXT -->
             <label for="jmeno">Jméno a příjmení:</label>
             <input type="text" id="jmeno" name="jmeno" placeholder="Jan Novák" required
-                   value="<?= htmlspecialchars($jmeno) ?>">
+                value="<?= htmlspecialchars($jmeno) ?>">
             <div class="hint">type="text" - základní textový vstup</div>
 
             <!-- EMAIL -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="jan@skola.cz" required
-                   value="<?= htmlspecialchars($email) ?>">
+                value="<?= htmlspecialchars($email) ?>">
             <div class="hint">type="email" - prohlížeč kontroluje formát emailu</div>
 
             <!-- NUMBER -->
             <label for="vek">Věk:</label>
             <input type="number" id="vek" name="vek" min="10" max="25"
-                   value="<?= htmlspecialchars((string) $vek) ?>">
+                value="<?= htmlspecialchars((string) $vek) ?>">
             <div class="hint">type="number" - jen čísla, atributy min/max</div>
 
             <!-- DATE -->
             <label for="narozeniny">Datum narození:</label>
             <input type="date" id="narozeniny" name="narozeniny"
-                   value="<?= htmlspecialchars($narozeniny) ?>">
+                value="<?= htmlspecialchars($narozeniny) ?>">
             <div class="hint">type="date" - výběr data z kalendáře</div>
 
             <!-- SELECT -->
@@ -374,4 +426,5 @@ $osoby = $_SESSION['osoby'];
         </ol>
     </div>
 </body>
+
 </html>
