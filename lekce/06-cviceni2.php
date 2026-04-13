@@ -29,7 +29,7 @@ Pokud je pole prázdné, vraťte 0.
 */
 function prumerZnamek(array $znamky): float
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -44,7 +44,7 @@ Pokud je pole prázdné, vraťte prázdný řetězec.
 */
 function nejdelsiSlovo(array $slova): string
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -57,7 +57,7 @@ Nepoužívejte substr_count().
 */
 function pocetVyskytu(string $text, string $znak): int
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -74,7 +74,7 @@ Vraťte true / false.
 */
 function jeSilneHeslo(string $heslo): bool
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -87,7 +87,7 @@ Vraťte součet pouze kladných čísel.
 */
 function soucetKladnych(array $cisla): int
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -107,7 +107,7 @@ Pokud je jiná jednotka, vraťte null.
 */
 function prevedTeplotu(float $hodnota, string $jednotka): ?float
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -128,7 +128,7 @@ Pokud je pole prázdné, vraťte prázdné pole.
 */
 function statistikaPole(array $cisla): array
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -141,7 +141,7 @@ Nepoužívejte array_unique().
 */
 function odstranDuplicity(array $pole): array
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -159,7 +159,7 @@ Vrací výslednou cenu.
 */
 function spocitejKosik(array $ceny): float
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -181,7 +181,7 @@ Použijte vnořené cykly.
 */
 function sachovnice(int $n): void
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 
@@ -198,7 +198,7 @@ Ignorujte velikost písmen.
 */
 function jePalindrom(string $text): bool
 {
-    // TODO: Doplňte řešení
+	// TODO: Doplňte řešení
 }
 
 

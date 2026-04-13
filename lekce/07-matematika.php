@@ -19,6 +19,7 @@ Instrukce:
 
 
 
+
 /*
 ----------------------------------------------------
 DALŠÍ ÚKOLY
@@ -45,26 +46,7 @@ DALŠÍ ÚKOLY
    Funkce vrátí text s typem trojúhelníku.
 
 ----------------------------------------------------
-*/
 
-function getTriangleAngleType(int $a, int $b, int $c)
-{
-    if ($a >= $c && $a >= $b) {
-        $a = $c;
-    } elseif ($b >= $c && $b >= $a) {
-        $b = $c;
-    } elseif ($c ** 2 == $a ** 2 + $b ** 2) {
-        return "pravouhly";
-    } elseif ($c ** 2 < $a ** 2 + $b ** 2) {
-        return "ostrouhly";
-    } elseif ($c ** 2 > $a ** 2 + $b ** 2) {
-        return "tupouhly";
-    }
-}
-
-echo getTriangleAngleType(7, 4, 5);
-
-/*
 6) Vytvořte funkci getHeightToA($a, $content),
    která vypočítá výšku na stranu a.
 
@@ -74,20 +56,6 @@ Použijte vzorec:
 
    Funkce vrátí výšku.
 
-   */
-
-/*
-
-function getHeightToA(float $a, float $obsah): float
-{
-    $v_a = (2 * $obsah) / $a;
-    return $v_a;
-}
-
-echo getHeightToA(5, 25);
-
-
-/*
 ----------------------------------------------------
 
 7) Vytvořte funkci getAngles($a, $b, $c),
@@ -122,84 +90,32 @@ Funkce vrátí pole:
 	   'min' => ...,
        'max' => ...
    ]
-*/
 
-/*
-
-function getMinMaxSide(int $a, int $b, int $c): array // Změněno na array
-{
-    // Předpokládejme na začátku, že první číslo je rovnou max i min
-    $max = $a;
-    $min = $a;
-
-    // Hledáme maximum
-    if ($b > $max) {
-        $max = $b;
-    }
-    if ($c > $max) {
-        $max = $c;
-    }
-
-    // Hledáme minimum
-    if ($b < $min) {
-        $min = $b;
-    }
-    if ($c < $min) {
-        $min = $c;
-    }
-
-    // Vracíme obě hodnoty v poli
-    return [
-        'max' => $max,
-        'min' => $min
-    ];
-}
-
-// Jak to správně vypsat (využijeme tvou znalost destrukturalizace ze 4. lekce):
-['max' => $mojeMax, 'min' => $mojeMin] = getMinMaxSide(10, 2, 7);
-
-echo "Největší strana je: {$mojeMax}\n";
-echo "Nejmenší strana je: {$mojeMin}\n";
-
-/*
 ====================================================
 FUNKCE – DOPLŇTE ŘEŠENÍ
 ====================================================
 */
-/*
+
 function getTriangleAngleType(float $a, float $b, float $c): string
 {
-
-    $x = "Tupoúhlý";
-    $y = "Ostroúhlý";
-    $z = "Pravouhlý";
-
-    if ($a >= $b && $a >= $c) {
-        $c = $a;
-        $a = $b;
-        $b = $c;
-    } elseif ($b >= $a && $b >= $c) {
-        $c = $b;
-        $b = $a;
-        $a = $c;
-    } else {
-        // c je již nejdelší strana
-    }
-
-    if ($a + $b >= $c && $a + $c >= $b && $b + $c >= $a) {
-        if ($c ** 2 == $a ** 2 + $b ** 2) {
-            return $z;
-        } elseif ($c ** 2 < $a ** 2 + $b ** 2) {
-            return $y;
-        } elseif ($c ** 2 > $a ** 2 + $b ** 2) {
-            return $x;
-        }
-    } else {
-        return "Trojuhelnik nelze sestrojit";
-    }
-
-    echo "Strany trojuhelnika: a={$a} cm, b={$b} cm, c={$c} cm \n";
+	// TODO: doplňte řešení
 }
 
-echo getTriangleAngleType(4, 5, 3) . "\n";
-*/
+
+function getHeightToA(float $a, float $content): float
+{
+	// TODO: doplňte řešení
+}
+
+
+function getAngles(float $a, float $b, float $c): array
+{
+	// TODO: doplňte řešení
+}
+
+
+function getMinMaxSide(float $a, float $b, float $c): array
+{
+	// TODO: doplňte řešení
+}
+
