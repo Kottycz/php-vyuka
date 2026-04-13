@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -109,12 +110,14 @@ $osoby = $_SESSION['osoby'];
 ?>
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekce 9: Formuláře - Příklad</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Lekce 9: Formuláře - Příklad</h1>
     <p><a href="index.php">&larr; Zpět</a> | <a href="09-formulare-zadani.php">Zadání &rarr;</a></p>
@@ -143,25 +146,25 @@ $osoby = $_SESSION['osoby'];
             <!-- TEXT -->
             <label for="jmeno">Jméno a příjmení:</label>
             <input type="text" id="jmeno" name="jmeno" placeholder="Jan Novák" required
-                   value="<?= htmlspecialchars($jmeno) ?>">
+                value="<?= htmlspecialchars($jmeno) ?>">
             <div class="hint">type="text" - základní textový vstup</div>
 
             <!-- EMAIL -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="jan@skola.cz" required
-                   value="<?= htmlspecialchars($email) ?>">
+                value="<?= htmlspecialchars($email) ?>">
             <div class="hint">type="email" - prohlížeč kontroluje formát emailu</div>
 
             <!-- NUMBER -->
             <label for="vek">Věk:</label>
             <input type="number" id="vek" name="vek" min="10" max="25"
-                   value="<?= htmlspecialchars((string) $vek) ?>">
+                value="<?= htmlspecialchars((string) $vek) ?>">
             <div class="hint">type="number" - jen čísla, atributy min/max</div>
 
             <!-- DATE -->
             <label for="narozeniny">Datum narození:</label>
             <input type="date" id="narozeniny" name="narozeniny"
-                   value="<?= htmlspecialchars($narozeniny) ?>">
+                value="<?= htmlspecialchars($narozeniny) ?>">
             <div class="hint">type="date" - výběr data z kalendáře</div>
 
             <!-- SELECT -->
@@ -265,4 +268,5 @@ $osoby = $_SESSION['osoby'];
         </ol>
     </div>
 </body>
+
 </html>
